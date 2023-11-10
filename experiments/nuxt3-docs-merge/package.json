@@ -9,6 +9,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@dqbd/tiktoken": "^1.0.7",
     "glob": "^10.3.10"
   }
 }
