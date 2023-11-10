@@ -4,7 +4,7 @@ import { mergeMarkdownFiles } from './utils/merge-markdown'
 
 // Count the tokens in the result
 const inputDir = './input'
-const outputPath = './nuxt3-docs-merged.md'
+const outputPath = './output/nuxt3-docs-merged-latest.md'
 const model: TiktokenModel = "gpt-4"
 
 // Merge all the docs into a single markdown file

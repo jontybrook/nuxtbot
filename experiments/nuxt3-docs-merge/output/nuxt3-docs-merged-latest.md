@@ -154,6 +154,10 @@ const { data, refresh } = await useFetch('/api/user')
 watch(() => route.query, () => refresh())
 </script>
 ```
+
+
+---
+
 ---
 title: Modules
 description: 'Learn how to migrate from Nuxt 2 to Nuxt 3 modules.'
@@ -248,6 +252,10 @@ You can start migration by renaming `.js` files, to `.ts`. TypeScript is designe
 ::callout
 You can use TypeScript syntax for Nuxt 2 and 3 modules and plugins without any extra dependencies.
 ::
+
+
+---
+
 ---
 title: Build Tooling
 description: 'Learn how to migrate from Nuxt 2 to Nuxt 3 build tooling.'
@@ -276,6 +284,10 @@ In addition, Nuxt ships with TypeScript support.
 4. Migrate `require` to `import`.
 
 <!-- TODO: Enabling webpack builder -->
+
+
+---
+
 ---
 title: Runtime Config
 description: 'Learn how to migrate from Nuxt 2 to Nuxt 3 runtime config.'
@@ -334,6 +346,10 @@ NUXT_PUBLIC_API_BASE=https://nuxtjs.org
 ```
 
 ::
+
+
+---
+
 ---
 title: Plugins and Middleware
 description: 'Learn how to migrate from Nuxt 2 to Nuxt 3 plugins and middleware.'
@@ -414,6 +430,10 @@ Much like Nuxt 2, route middleware placed in your `~/middleware` folder is autom
 
 1. Migrate your route middleware to use the `defineNuxtRouteMiddleware` helper function.
 1. Any global middleware (such as in your `nuxt.config`) can be placed in your `~/middleware` folder with a `.global` extension, for example `~/middleware/auth.global.ts`.
+
+
+---
+
 ---
 title: Pages and Layouts
 description: Learn how to migrate from Nuxt 2 to Nuxt 3 pages and layouts.
@@ -646,6 +666,10 @@ function navigate(){
 ```
 
 ::
+
+
+---
+
 ---
 title: Configuration
 description: 'Learn how to migrate from Nuxt 2 to Nuxt 3 new configuration.'
@@ -845,6 +869,10 @@ export default defineNuxtPlugin(nuxtApp => {
   nuxtApp.vueApp.use(store);
 })
 ```
+
+
+---
+
 ---
 title: Meta Tags
 description: Manage your meta tags, from Nuxt 2 to Nuxt 3.
@@ -972,6 +1000,10 @@ export default defineNuxtComponent({
 })
 </script>
 ```
+
+
+---
+
 ---
 title: Auto Imports
 description:  Nuxt 3 adopts a minimal friction approach, meaning wherever possible components and composables are auto-imported.
@@ -990,6 +1022,10 @@ In the rest of the migration documentation, you will notice that key Nuxt and Vu
 ::callout
 You can look at `.nuxt/types/components.d.ts` and `.nuxt/types/imports.d.ts` to see how Nuxt has resolved your components and composable auto-imports.
 ::
+
+
+---
+
 ---
 title: Server
 description: 'Learn how to migrate from Nuxt 2 to Nuxt 3 server.'
@@ -1007,6 +1043,10 @@ In a built Nuxt 3 application, there is no runtime Nuxt dependency. That means y
 
 :read-more{to="/docs/guide/directory-structure/server"}
 :read-more{to="/docs/guide/going-further/hooks#server-hooks-runtime"}
+
+
+---
+
 ---
 title: Overview
 description: Nuxt 3 is a complete rewrite of Nuxt 2, and also based on a new set of underlying technologies.
@@ -1031,6 +1071,10 @@ If you need to remain on Nuxt 2, but want to benefit from Nuxt 3 features in Nux
 ## Next Steps
 
 - Learn about differences in [configuration](/docs/migration/configuration)
+
+
+---
+
 ---
 title: Configuration
 description: Nuxt is configured with sensible defaults to make you productive.
@@ -1244,6 +1288,10 @@ export default defineNuxtConfig({
 ```
 
 :read-more{to="/docs/api/configuration/nuxt-config#vue-1"}
+
+
+---
+
 ---
 title: 'Views'
 description: 'Nuxt provides several component layers to implement the user interface of your application.'
@@ -1397,6 +1445,10 @@ export default defineNitroPlugin((nitroApp) => {
 ```
 
 :read-more{to="/docs/guide/going-further/hooks"}
+
+
+---
+
 ---
 title: 'Transitions'
 description: Apply transitions between pages and layouts with Vue or native browser View Transitions.
@@ -1840,6 +1892,10 @@ export default defineNuxtRouteMiddleware(to => {
 - View transitions may not work as expected with nested pages/layouts/async components owing to this upstream Vue bug: <https://github.com/vuejs/core/issues/5513>. If you make use of this pattern, you may need to delay adopting this experimental feature or implement it yourself. Feedback is very welcome.
 
 - If you perform data fetching within your page setup functions, that you may wish to reconsider using this feature for the moment. (By design, View Transitions completely freeze DOM updates whilst they are taking place.) We're looking at restrict the View Transition to the final moments before `<Suspense>` resolves, but in the interim you may want to consider carefully whether to adopt this feature if this describes you.
+
+
+---
+
 ---
 title: 'Error Handling'
 description: 'Learn how to catch and handle errors in Nuxt.'
@@ -2091,6 +2147,10 @@ If you navigate to another route, the error will be cleared automatically.
 ```
 
 :link-example{to="/docs/examples/advanced/error-handling"}
+
+
+---
+
 ---
 title: 'Assets'
 description: 'Nuxt offers two options for your assets.'
@@ -2195,6 +2255,10 @@ export default defineNuxtConfig({
 ```
 
 ::
+
+
+---
+
 ---
 title: SEO and Meta
 description: Improve your Nuxt app's SEO with powerful head config, composables and components.
@@ -2497,6 +2561,10 @@ The example below shows how you might enable Google Fonts using either the `link
   ```
 
 ::
+
+
+---
+
 ---
 title: 'Layers'
 description: Nuxt provides a powerful system that allows you to extend the default files, configs, and much more.
@@ -2540,6 +2608,10 @@ Watch Learn Vue video about Nuxt Layers.
 
 - [Nuxt Docus Theme](https://github.com/nuxt-themes/docus#readme)
 - [Nuxt Content Wind Theme](https://github.com/Atinux/content-wind#readme)
+
+
+---
+
 ---
 title: 'Data fetching'
 description: Nuxt provides composables to handle data fetching within your application.
@@ -3079,6 +3151,10 @@ const { data } = await useFetch('/api/superjson', {
 })
 </script>
 ```
+
+
+---
+
 ---
 title: Upgrade Guide
 description: 'Learn how to upgrade to the latest Nuxt version.'
@@ -3137,6 +3213,10 @@ If you prefer to progressively migrate your Nuxt 2 application to Nuxt 3, you ca
 ::read-more{to="/docs/bridge/overview"}
 **Migrate from Nuxt 2 to Nuxt Bridge**
 ::
+
+
+---
+
 ---
 title: 'Styling'
 description: 'Learn how to style your Nuxt application.'
@@ -3663,6 +3743,10 @@ export default defineNuxtConfig({
   },
 })
 ```
+
+
+---
+
 ---
 title: 'Server'
 description: Build full-stack applications, fetch data from your database, create APIs, or even generate static server-side content like a sitemap or a RSS feed, from a single codebase.
@@ -3758,6 +3842,10 @@ Some route rules (`redirect` and `prerender`) also affect client-side behavior.
 Nitro is used to build the app for server side rendering, as well as pre-rendering.
 
 :read-more{to="/docs/guide/concepts/rendering"}
+
+
+---
+
 ---
 title: Testing
 description: How to test your Nuxt application.
@@ -3894,6 +3982,10 @@ const pageUrl = url('/page')
 ::callout
 We are working on it, stay tuned!
 ::
+
+
+---
+
 ---
 title: 'Introduction'
 description: Nuxt's goal is to make web development intuitive and performant with a great Developer Experience in mind.
@@ -3971,6 +4063,10 @@ Nuxt is composed of different [core packages](https://github.com/nuxt/nuxt/tree/
 - Nuxt 2 Bridge: [@nuxt/bridge](https://github.com/nuxt/bridge)
 
 We recommend reading each concept to have a full vision of Nuxt capabilities and the scope of each package.
+
+
+
+---
 
 ---
 title: 'Routing'
@@ -4119,6 +4215,10 @@ definePageMeta({
 ```
 
 :read-more{to="/docs/api/utils/define-page-meta"}
+
+
+---
+
 ---
 title: 'State Management'
 description: Nuxt provides powerful state management libraries and the useState composable to create a reactive and SSR-friendly shared state.
@@ -4277,6 +4377,10 @@ Nuxt is not opinionated about state management, so feel free to choose the right
 - [Pinia](/modules/pinia) - the official Vue recommendation
 - [Harlem](/modules/harlem) - immutable global state management
 - [XState](/modules/xstate) - state machine approach with tools for visualizing and testing your state logic
+
+
+---
+
 ---
 title: 'Installation'
 description: 'Get started with Nuxt quickly with our online starters or start locally with your terminal.'
@@ -4402,6 +4506,10 @@ Well done! A browser window should automatically open for <http://localhost:3000
 Now that you've created your Nuxt 3 project, you are ready to start building your application.
 
 :read-more{title="Nuxt Concepts" to="/docs/guide/concepts"}
+
+
+---
+
 ---
 title: 'Deployment'
 description: Learn how to deploy your Nuxt application to any hosting provider.
@@ -4726,6 +4834,10 @@ Accordingly, you should make sure that the following options are unchecked / dis
 5. Scrape Shield > Disable "Server-side Excludes"
 
 With these settings, you can be sure that Cloudflare won't inject scripts into your Nuxt application that may cause unwanted side effects.
+
+
+---
+
 ---
 title: Nuxt Configuration
 titleTemplate: '%s'
@@ -4738,6 +4850,10 @@ This file is auto-generated from Nuxt source code.
 ::
 
 <!-- GENERATED_CONFIG_DOCS -->
+
+
+---
+
 ---
 title: 'useServerSeoMeta'
 description: The useServerSeoMeta composable lets you define your site's SEO meta tags as a flat object with full TypeScript support.
@@ -4765,6 +4881,10 @@ useServerSeoMeta({
 Parameters are exactly the same as with [`useSeoMeta`](/docs/api/composables/use-seo-meta)
 
 :read-more{to="/docs/getting-started/seo-meta"}
+
+
+---
+
 ---
 title: 'useNuxtData'
 description: 'Access the current cached value of data fetching composables.'
@@ -4847,6 +4967,10 @@ const { data } = await useFetch('/api/addTodo', {
 ```ts
 useNuxtData<DataT = any> (key: string): { data: Ref<DataT | null> }
 ```
+
+
+---
+
 ---
 title: 'useRequestURL'
 description: 'Access the incoming request URL with the useRequestURL composable.'
@@ -4882,6 +5006,10 @@ const url = useRequestURL()
 ::callout{icon="i-simple-icons-mdnwebdocs" color="gray" to="https://developer.mozilla.org/en-US/docs/Web/API/URL#instance_properties" target="_blank"}
 Read about the URL instance properties on the MDN documentation.
 ::
+
+
+---
+
 ---
 title: useHeadSafe
 description: The recommended way to provide head data with user input.
@@ -4936,6 +5064,10 @@ export default {
 ```
 
 See [@unhead/schema](https://github.com/unjs/unhead/blob/main/packages/schema/src/safeSchema.ts) for more detailed types.
+
+
+---
+
 ---
 title: 'useSeoMeta'
 description: The useSeoMeta composable lets you define your site's SEO meta tags as a flat object with full TypeScript support.
@@ -4987,6 +5119,10 @@ useSeoMeta({
 There are over 100 parameters. See the [full list of parameters in the source code](https://github.com/harlan-zw/zhead/blob/main/src/metaFlat.ts).
 
 :read-more{to="/docs/getting-started/seo-meta"}
+
+
+---
+
 ---
 title: "useState"
 description: The useState composable creates a reactive and SSR-friendly shared state.
@@ -5034,6 +5170,10 @@ useState<T>(key: string, init?: () => T | Ref<T>): Ref<T>
 - `key`: A unique key ensuring that data fetching is properly de-duplicated across requests. If you do not provide a key, then a key that is unique to the file and line number of the instance of [`useState`](/docs/api/composables/use-state) will be generated for you.
 - `init`: A function that provides initial value for the state when not initiated. This function can also return a `Ref`.
 - `T`: (typescript only) Specify the type of state
+
+
+---
+
 ---
 title: 'useHydration'
 description: 'Allows full control of the hydration cycle to set and receive data from the server.'
@@ -5070,6 +5210,10 @@ You can use `useHydration()` within composables, plugins and components.
 Once the initial data is returned using the `get` function on the server side, you can access that data within `nuxtApp.payload` using the unique key that is passed as the first parameter in `useHydration` composable.
 
 :read-more{to="/docs/getting-started/data-fetching"}
+
+
+---
+
 ---
 title: 'useRuntimeConfig'
 description: 'Access runtime config variables with the useRuntimeConfig composable.'
@@ -5212,6 +5356,10 @@ export default defineEventHandler((event) => {
 ```
 
 :read-more{to="/docs/guide/going-further/runtime-config"}
+
+
+---
+
 ---
 title: 'useAsyncData'
 description: useAsyncData provides access to data that resolves asynchronously in a SSR-friendly composable.
@@ -5343,6 +5491,10 @@ type AsyncDataRequestStatus = 'idle' | 'pending' | 'success' | 'error'
 ```
 
 :read-more{to="/docs/getting-started/data-fetching"}
+
+
+---
+
 ---
 title: 'useAppConfig'
 description: 'Access the reactive app config defined in the project.'
@@ -5362,6 +5514,10 @@ console.log(appConfig)
 ```
 
 :read-more{to="/docs/guide/directory-structure/app-config"}
+
+
+---
+
 ---
 title: 'useFetch'
 description: 'Fetch data from an API endpoint with a SSR-friendly composable.'
@@ -5520,6 +5676,10 @@ interface AsyncDataExecuteOptions {
 
 type AsyncDataRequestStatus = 'idle' | 'pending' | 'success' | 'error'
 ```
+
+
+---
+
 ---
 title: "useRouter"
 description: "The useRouter composable returns the router instance."
@@ -5612,6 +5772,10 @@ However, Nuxt has a concept of **route middleware** that simplifies the implemen
 ## Universal Router Instance
 
 If you do not have a `pages/` folder, then [`useRouter`](/docs/api/composables/use-router)  will return a universal router instance with similar helper methods, but be aware that not all features may be supported or behave in exactly the same way as with `vue-router`.
+
+
+---
+
 ---
 title: "useError"
 description: useError composable returns the global Nuxt error that is being handled.
@@ -5644,6 +5808,10 @@ interface {
 ```
 
 :read-more{to="/docs/getting-started/error-handling"}
+
+
+---
+
 ---
 title: "useRoute"
 description: The useRoute composable returns the current route.
@@ -5691,6 +5859,10 @@ Apart from dynamic parameters and query parameters, `useRoute()` also provides t
 - `redirectedFrom`: route location that was attempted to access before ending up on the current route location
 
 :read-more{icon="i-simple-icons-vuedotjs" to="https://router.vuejs.org/api/interfaces/RouteLocationNormalizedLoaded.html"}
+
+
+---
+
 ---
 title: 'useRequestEvent'
 description: 'Access the incoming request event with the useRequestEvent composable.'
@@ -5714,6 +5886,10 @@ const url = event.path
 ::callout
 In the browser, `useRequestEvent` will return `undefined`.
 ::
+
+
+---
+
 ---
 title: useLazyAsyncData
 description: This wrapper around useAsyncData triggers navigation immediately.
@@ -5761,6 +5937,10 @@ watch(count, (newCount) => {
 ::
 
 :read-more{to="/docs/getting-started/data-fetching#uselazyasyncdata"}
+
+
+---
+
 ---
 title: useHead
 description: useHead customizes the head properties of individual pages of your Nuxt app.
@@ -5830,6 +6010,10 @@ An object accepting the following head metadata:
   - **Type**: `Record<string, any>`
 - `htmlAttrs`: Sets attributes of the `<html>` tag. Each object property is mapped to the corresponding attribute.
   - **Type**: `Record<string, any>`
+
+
+---
+
 ---
 title: 'useCookie'
 description: useCookie is an SSR-friendly composable to read and write cookies.
@@ -6048,6 +6232,10 @@ export default defineEventHandler(event => {
 ```
 
 :link-example{to="/docs/examples/advanced/use-cookie"}
+
+
+---
+
 ---
 title: 'useNuxtApp'
 description: 'Access the shared runtime context of the Nuxt Application.'
@@ -6298,6 +6486,10 @@ Native async context support works currently in Bun and Node.
 ::
 
 :read-more{to="/docs/guide/going-further/experimental-features#asynccontext"}
+
+
+---
+
 ---
 title: "useRequestHeaders"
 description: "Use useRequestHeaders to access the incoming request headers."
@@ -6335,6 +6527,10 @@ const { data } = await useFetch('/api/confidential', {
 })
 </script>
 ```
+
+
+---
+
 ---
 title: 'useLazyFetch'
 description: This wrapper around useFetch triggers navigation immediately.
@@ -6386,6 +6582,10 @@ watch(posts, (newPosts) => {
 ::
 
 :read-more{to="/docs/getting-started/data-fetching"}
+
+
+---
+
 ---
 title: 'Lifecycle Hooks'
 description: Nuxt provides a powerful hooking system to expand almost every aspect using hooks.
@@ -6483,6 +6683,10 @@ Hook                   | Arguments             | Description                    
 `request`             | `event`        | Called when a request is received. | [event](https://github.com/unjs/h3/blob/f6ceb5581043dc4d8b6eab91e9be4531e0c30f8e/src/types.ts#L38)
 `beforeResponse`      | `event, { body }`        | Called before sending the response. | [event](https://github.com/unjs/h3/blob/f6ceb5581043dc4d8b6eab91e9be4531e0c30f8e/src/types.ts#L38), unknown
 `afterResponse`       | `event, { body }`        | Called after sending the response. | [event](https://github.com/unjs/h3/blob/f6ceb5581043dc4d8b6eab91e9be4531e0c30f8e/src/types.ts#L38), unknown
+
+
+---
+
 ---
 title: 'Import meta'
 description: Understand where your code is running using `import.meta`.
@@ -6541,6 +6745,10 @@ export default defineNuxtModule({
   }
 })
 ```
+
+
+---
+
 ---
 title: 'Nuxt API Reference'
 titleTemplate: '%s'
@@ -6572,6 +6780,10 @@ surround: false
   Explore all Nuxt configuration options to customize your application.
   ::
 ::
+
+
+---
+
 ---
 title: "navigateTo"
 description: navigateTo is a helper function that programmatically navigates users.
@@ -6766,6 +6978,10 @@ An object accepting the following properties:
       **Type**: `boolean`
 
     Refer to the [documentation](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) for more detailed information on the **windowFeatures** properties.
+
+
+---
+
 ---
 title: 'updateAppConfig'
 description: 'Update the App Config at runtime.'
@@ -6793,6 +7009,10 @@ console.log(appConfig) // { foo: 'baz' }
 ```
 
 :read-more{to="/docs/guide/directory-structure/app-config"}
+
+
+---
+
 ---
 title: 'clearNuxtState'
 description: Delete the cached state of useState.
@@ -6816,6 +7036,10 @@ clearNuxtState (keys?: string | string[] | ((key: string) => boolean)): void
 ## Parameters
 
 - `keys`: One or an array of keys that are used in [`useState`](/docs/api/composables/use-state) to delete their cached state. If no keys are provided, **all state** will be invalidated.
+
+
+---
+
 ---
 title: "defineNuxtRouteMiddleware"
 description: "Create named route middleware using defineNuxtRouteMiddleware helper function."
@@ -6883,6 +7107,10 @@ export default defineNuxtRouteMiddleware((to, from) => {
 ```
 
 Both [navigateTo](/docs/api/utils/navigate-to) and [abortNavigation](/docs/api/utils/abort-navigation) are globally available helper functions that you can use inside `defineNuxtRouteMiddleware`.
+
+
+---
+
 ---
 title: 'prefetchComponents'
 description: Nuxt provides utilities to give you control over prefetching components.
@@ -6911,6 +7139,10 @@ Current implementation behaves exactly the same as [`preloadComponents`](/docs/a
 ::callout
 On server, `prefetchComponents` will have no effect.
 ::
+
+
+---
+
 ---
 title: "onNuxtReady"
 description: The onNuxtReady composable allows running a callback after your app has finished initializing.
@@ -6936,6 +7168,10 @@ export default defineNuxtPlugin(() => {
 ```
 
 It is 'safe' to run even after your app has initialized. In this case, then the code will be registered to run in the next idle callback.
+
+
+---
+
 ---
 title: "onBeforeRouteUpdate"
 description: The onBeforeRouteUpdate composable allows registering a route guard within a component.
@@ -6947,6 +7183,10 @@ links:
 ---
 
 :read-more{icon="i-simple-icons-vuedotjs" to="https://router.vuejs.org/api/#onBeforeRouteUpdate" title="Vue Router Docs" target="_blank"}
+
+
+---
+
 ---
 title: 'abortNavigation'
 description: 'abortNavigation is a helper function that prevents navigation from taking place and throws an error if one is set as a parameter.'
@@ -7020,6 +7260,10 @@ export default defineNuxtRouteMiddleware((to, from) => {
   }
 })
 ```
+
+
+---
+
 ---
 title: "$fetch"
 description: Nuxt uses ofetch to expose globally the $fetch helper for making HTTP requests.
@@ -7077,6 +7321,10 @@ function contactForm() {
 ::callout
 `$fetch` is the preferred way to make HTTP calls in Nuxt instead of [@nuxt/http](https://github.com/nuxt/http) and [@nuxtjs/axios](https://github.com/nuxt-community/axios-module) that are made for Nuxt 2.
 ::
+
+
+---
+
 ---
 title: 'preloadComponents'
 description: Nuxt provides utilities to give you control over preloading components.
@@ -7100,6 +7348,10 @@ await preloadComponents(['MyGlobalComponent1', 'MyGlobalComponent2'])
 ::callout
 On server, `preloadComponents` will have no effect.
 ::
+
+
+---
+
 ---
 title: 'preloadRouteComponents'
 description: preloadRouteComponents allows you to manually preload individual pages in your Nuxt app.
@@ -7141,6 +7393,10 @@ const submit = async () => {
 ::callout
 On server, `preloadRouteComponents` will have no effect.
 ::
+
+
+---
+
 ---
 title: 'reloadNuxtApp'
 description: reloadNuxtApp will perform a hard reload of the page.
@@ -7215,6 +7471,10 @@ An object accepting the following properties:
 
   Whether to dump the current Nuxt state to sessionStorage (as `nuxt:reload:state`). By default this will have no
   effect on reload unless `experimental.restoreState` is also set, or unless you handle restoring the state yourself.
+
+
+---
+
 ---
 title: 'createError'
 description: Create an error object with additional metadata.
@@ -7266,6 +7526,10 @@ export default eventHandler(() => {
 ```
 
 :read-more{to="/docs/getting-started/error-handling"}
+
+
+---
+
 ---
 title: 'showError'
 description: Nuxt provides a quick and simple way to show a full screen error page if needed.
@@ -7297,6 +7561,10 @@ The error is set in the state using [`useError()`](/docs/api/composables/use-err
 ::
 
 :read-more{to="/docs/getting-started/error-handling"}
+
+
+---
+
 ---
 title: 'setPageLayout'
 description: setPageLayout allows you to dynamically change the layout of a page. 
@@ -7321,6 +7589,10 @@ export default defineNuxtRouteMiddleware((to) => {
 ::callout
 If you choose to set the layout dynamically on the server side, you _must_ do so before the layout is rendered by Vue (that is, within a plugin or route middleware) to avoid a hydration mismatch.
 ::
+
+
+---
+
 ---
 title: "clearError"
 description: "The clearError composable clears all handled errors."
@@ -7352,6 +7624,10 @@ clearError({ redirect: '/homepage' })
 Errors are set in state using [`useError()`](/docs/api/composables/use-error). The `clearError` composable will reset this state and calls the `app:error:cleared` hook with the provided options.
 
 :read-more{to="/docs/getting-started/error-handling"}
+
+
+---
+
 ---
 title: "defineNuxtComponent"
 description: defineNuxtComponent() is a helper function for defining type safe components with Options API.
@@ -7405,6 +7681,10 @@ export default defineNuxtComponent({
 })
 </script>
 ```
+
+
+---
+
 ---
 title: 'setResponseStatus'
 description: setResponseStatus sets the statusCode (and optionally the statusMessage) of the response.
@@ -7434,6 +7714,10 @@ In the browser, `setResponseStatus` will have no effect.
 ::
 
 :read-more{to="/docs/getting-started/error-handling"}
+
+
+---
+
 ---
 title: 'definePageMeta'
 description: 'Define metadata for your page components.'
@@ -7634,6 +7918,10 @@ definePageMeta({
 })
 </script>
 ```
+
+
+---
+
 ---
 title: 'refreshNuxtData'
 description: refreshNuxtData refetches all data from the server and updates the page.
@@ -7707,6 +7995,10 @@ const refresh = () => refreshNuxtData('count')
 ```
 
 :read-more{to="/docs/getting-started/data-fetching"}
+
+
+---
+
 ---
 title: 'addRouteMiddleware'
 description: 'addRouteMiddleware() is a helper function to dynamically add middleware in your application.'
@@ -7792,6 +8084,10 @@ export default defineNuxtPlugin(() => {
   )
 })
 ```
+
+
+---
+
 ---
 title: 'prerenderRoutes'
 description: prerenderRoutes hints to Nitro to prerender an additional route.
@@ -7814,6 +8110,10 @@ prerenderRoutes(['/', '/about'])
 ::callout
 In the browser, or if called outside prerendering, `prerenderRoutes` will have no effect.
 ::
+
+
+---
+
 ---
 title: 'defineRouteRules'
 description: 'Define route rules for hybrid rendering at the page level.'
@@ -7866,6 +8166,10 @@ For more control, such as if you are using a custom `path` or `alias` set in the
 ::read-more{to="/docs/guide/concepts/rendering#hybrid-rendering" icon="i-ph-medal-duotone"}
 Read more about the `routeRules`.
 ::
+
+
+---
+
 ---
 title: "onBeforeRouteLeave"
 description: The onBeforeRouteLeave composable allows registering a route guard within a component.
@@ -7877,6 +8181,10 @@ links:
 ---
 
 :read-more{icon="i-simple-icons-vuedotjs" to="https://router.vuejs.org/api/#onBeforeRouteLeave" title="Vue Router Docs" target="_blank"}
+
+
+---
+
 ---
 title: 'clearNuxtData'
 description: Delete cached data, error status and pending promises of useAsyncData and useFetch.
@@ -7900,6 +8208,10 @@ clearNuxtData (keys?: string | string[] | ((key: string) => boolean)): void
 ## Parameters
 
 * `keys`: One or an array of keys that are used in [`useAsyncData`](/docs/api/composables/use-async-data) to delete their cached data. If no keys are provided, **all data** will be invalidated.
+
+
+---
+
 ---
 title: "<NuxtClientFallback>"
 description: "Nuxt provides `<NuxtClientFallback>` component to render its content on the client if any of its children trigger an error in SSR"
@@ -7965,7 +8277,11 @@ This component is experimental and in order to use it you must enable the `exper
   </NuxtClientFallback>
 </template>
 ```
-  ---
+  
+
+---
+
+---
 title: "<NuxtLink>"
 description: "Nuxt provides <NuxtLink> component to handle any kind of links within your application."
 links:
@@ -8087,6 +8403,10 @@ defineNuxtLink({
 - `trailingSlash`: An option to either add or remove trailing slashes in the `href`. If unset or not matching the valid values `append` or `remove`, it will be ignored.
 
 :link-example{to="/docs/examples/routing/pages"}
+
+
+---
+
 ---
 title: "<NuxtLayout>"
 description: "Nuxt provides the <NuxtLayout> component to show layouts on pages and error pages."
@@ -8203,6 +8523,10 @@ function logFoo () {
 ````
 
 :read-more{to="/docs/guide/directory-structure/layouts"}
+
+
+---
+
 ---
 title: "<NuxtErrorBoundary>"
 description: The <NuxtErrorBoundary> component handles client-side errors happening in its default slot.
@@ -8245,6 +8569,10 @@ The `<NuxtErrorBoundary>` uses Vue's [`onErrorCaptured`](https://vuejs.org/api/c
   ```
 
 :read-more{to="/docs/getting-started/error-handling"}
+
+
+---
+
 ---
 title: "<NuxtPage>"
 description: The <NuxtPage> component is required to display pages located in the pages/ directory.
@@ -8338,6 +8666,10 @@ These custom props are accessible via `attrs` in the Nuxt app.
 For example, in the above example, the value of `foobar` will be available using `$attrs.foobar` in the template or `useAttrs().foobar` in `<script setup>`.
 
 :read-more{to="/docs/guide/directory-structure/pages"}
+
+
+---
+
 ---
 title: '<ClientOnly>'
 description: Render components only in client-side with the <ClientOnly> component.
@@ -8384,6 +8716,10 @@ The `<ClientOnly>` component renders its slot only in client-side. To import a c
   </div>
 </template>
 ```
+
+
+---
+
 ---
 title: '<Teleport>'
 description: The <Teleport> component teleports a component to a different location in the DOM.
@@ -8424,6 +8760,10 @@ The `to` target of [`<Teleport>`](https://vuejs.org/guide/built-ins/teleport.htm
 ```
 
 :link-example{to="/docs/examples/advanced/teleport"}
+
+
+---
+
 ---
 title: '<NuxtWelcome>'
 description: The `<NuxtWelcome>` component greets users in new projects made from the starter template.
@@ -8449,6 +8789,10 @@ Preview the `<NuxtWelcome />` component.
 ::callout
 This component is part of [nuxt/assets](https://github.com/nuxt/assets).
 ::
+
+
+---
+
 ---
 title: '<NuxtLoadingIndicator>'
 description: 'Display a progress bar between page navigations.'
@@ -8491,6 +8835,10 @@ You can pass custom HTML or components through the loading indicator's default s
 This component is optional. :br
 To achieve full customization, you can implement your own one based on [its source code](https://github.com/nuxt/nuxt/blob/main/packages/nuxt/src/app/components/nuxt-loading-indicator.ts).
 ::
+
+
+---
+
 ---
 title: "<NuxtIsland>"
 description: "Nuxt provides `<NuxtIsland>` component to render a non-interactive component without any client JS"
@@ -8543,6 +8891,10 @@ Every slot is interactive since the parent component is the one providing it.
 Some slots are reserved to `NuxtIsland` for special cases.
 
 - `#fallback`: Specify the content to be rendered before the island loads (if the component is lazy) or if `NuxtIsland` fails to fetch the component.
+
+
+---
+
 ---
 title: "<NuxtPicture>"
 description: "Nuxt provides a <NuxtPicture> component to handle automatic image optimization."
@@ -8570,6 +8922,10 @@ npx nuxi@latest module add image
 ::read-more{to="https://image.nuxt.com/usage/nuxt-picture" target="_blank"}
 Read more about the `<NuxtPicture>` component.
 ::
+
+
+---
+
 ---
 title: "<NuxtImg>"
 description: "Nuxt provides a <NuxtImg> component to handle automatic image optimization."
@@ -8613,6 +8969,10 @@ Will result in:
 ::read-more{to="https://image.nuxt.com/usage/nuxt-img" target="_blank"}
 Read more about the `<NuxtImg>` component.
 ::
+
+
+---
+
 ---
 title: "Context"
 description: Nuxt Kit provides a set of utilities to help you work with context.
@@ -8743,6 +9103,10 @@ export default defineNuxtModule({
 ```
 
 ::
+
+
+---
+
 ---
 title: "Compatibility"
 description: Nuxt Kit provides a set of utilities to help you check the compatibility of your modules with different Nuxt versions.
@@ -8967,6 +9331,10 @@ function getNuxtVersion(nuxt?: Nuxt): string;
 **Default**: `useNuxt()`
 
 Nuxt instance. If not provided, it will be retrieved from the context via `useNuxt()` call.
+
+
+---
+
 ---
 title: "Auto-imports"
 description: Nuxt Kit provides a set of utilities to help you work with auto-imports. These functions allow you to register your own utils, composables and Vue APIs.
@@ -9292,6 +9660,10 @@ export default defineNuxtModule({
   }
 })
 ```
+
+
+---
+
 ---
 title: "Components"
 description: Nuxt Kit provides a set of utilities to help you work with components. You can register components globally or locally, and also add directories to be scanned for components.
@@ -9577,6 +9949,10 @@ An object with the following properties:
   **Default**: `1`
 
   Priority of the component, if multiple components have the same name, the one with the highest priority will be used.
+
+
+---
+
 ---
 title: "Modules"
 description: Nuxt Kit provides a set of utilities to help you create and use modules. You can use these utilities to create your own modules or to reuse existing modules.
@@ -9749,6 +10125,10 @@ export default defineNuxtModule({
   }
 })
 ```
+
+
+---
+
 ---
 title: "Logging"
 description: Nuxt Kit provides a set of utilities to help you work with logging. These functions allow you to log messages with extra features.
@@ -9794,6 +10174,10 @@ export default defineNuxtModule({
   }
 })
 ```
+
+
+---
+
 ---
 title: "Programmatic Usage"
 description: Nuxt Kit provides a set of utilities to help you work with Nuxt programmatically. These functions allow you to load Nuxt, build Nuxt, and load Nuxt configuration.
@@ -9941,6 +10325,10 @@ interface Nuxt {
 **Required**: `true`
 
 Nuxt instance to build. It can be retrieved from the context via `useNuxt()` call.
+
+
+---
+
 ---
 title: "Layout"
 description: "Nuxt Kit provides a set of utilities to help you work with layouts."
@@ -10021,6 +10409,10 @@ A template object or a string with the path to the template. If a string is prov
     **Type**: `boolean`
 
     If set to `true`, the template will be written to the destination file. Otherwise, the template will be used only in virtual filesystem.
+
+
+---
+
 ---
 title: Pages
 description: Nuxt Kit provides a set of utilities to help you create and use pages. You can use these utilities to manipulate the pages configuration or to define route rules.
@@ -10289,6 +10681,10 @@ export default defineNuxtModule({
 ```
 
 ::
+
+
+---
+
 ---
 title: "Nitro"
 description: Nuxt Kit provides a set of utilities to help you work with Nitro. These functions allow you to add server handlers, plugins, and prerender routes.
@@ -10686,6 +11082,10 @@ export default defineNuxtModule({
   }
 })
 ```
+
+
+---
+
 ---
 title: "Templates"
 description: Nuxt Kit provides a set of utilities to help you work with templates. These functions allow you to generate extra files during development and build time.
@@ -10968,6 +11368,10 @@ export default defineNuxtModule({
   }
 })
 ```
+
+
+---
+
 ---
 title: Builder
 description: Nuxt Kit provides a set of utilities to help you work with the builder. These functions allow you to extend the webpack and vite configurations.
@@ -11459,6 +11863,10 @@ Options to pass to the callback function. This object can have the following pro
   **Type**: `boolean`
   
   If set to `true`, the callback function will be prepended to the array with `unshift()` instead of `push()`.
+
+
+---
+
 ---
 title: Plugins
 description: Nuxt Kit provides a set of utilities to help you create and use plugins. You can add plugins or plugin templates to your module using these functions.
@@ -11713,6 +12121,10 @@ export default defineNuxtPlugin((nuxtApp) => {
 ```
 
 ::
+
+
+---
+
 ---
 title: Resolving
 description: Nuxt Kit provides a set of utilities to help you resolve paths. These functions allow you to resolve paths relative to the current module, with unknown name or extension.
@@ -11977,6 +12389,10 @@ export default defineNuxtModule({
   }
 })
 ```
+
+
+---
+
 ---
 title: "Examples"
 description: Examples of Nuxt Kit utilities in use.
@@ -12018,6 +12434,10 @@ async function getViteConfig() {
 const viteConfig = await getViteConfig()
 console.log(viteConfig)
 ```
+
+
+---
+
 ---
 title: "nuxi devtools"
 description: The devtools command allows you to enable or disable Nuxt DevTools on a per-project basis.
@@ -12041,6 +12461,10 @@ Option        | Default          | Description
 ::read-more{icon="i-simple-icons-nuxtdotjs" to="https://devtools.nuxt.com" target="_blank"}
 Read more about the **Nuxt DevTools**.
 ::
+
+
+---
+
 ---
 title: 'nuxi prepare'
 description: The prepare command creates a .nuxt directory in your application and generates types.
@@ -12060,6 +12484,10 @@ The `prepare` command creates a [`.nuxt`](/docs/guide/directory-structure/nuxt) 
 Option        | Default          | Description
 -------------------------|-----------------|------------------
 `rootDir` | `.` | The root directory of the application to prepare.
+
+
+---
+
 ---
 title: "nuxi analyze"
 description: "Analyze the production bundle or your Nuxt application."
@@ -12083,6 +12511,10 @@ Option        | Default          | Description
 ::callout
 This command sets `process.env.NODE_ENV` to `production`.
 ::
+
+
+---
+
 ---
 title: 'nuxi dev'
 description: The dev command starts a development server with hot module replacement at http://localhost:3000
@@ -12121,6 +12553,10 @@ This command sets `process.env.NODE_ENV` to `development`.
 ::callout
 If you are using a self-signed certificate in development, you will need to set `NODE_TLS_REJECT_UNAUTHORIZED=0` in your environment.
 ::
+
+
+---
+
 ---
 title: "nuxi info"
 description: The info command logs information about the current or specified Nuxt project.
@@ -12140,6 +12576,10 @@ The `info` command logs information about the current or specified Nuxt project.
 Option        | Default          | Description
 -------------------------|-----------------|------------------
 `rootDir` | `.` | The directory of the target application.
+
+
+---
+
 ---
 title: "nuxi init"
 description: The init command initializes a fresh Nuxt project.
@@ -12170,6 +12610,10 @@ Option        | Default          | Description
 
 - `NUXI_INIT_REGISTRY`: Set to a custom template registry. ([learn more](https://github.com/unjs/giget#custom-registry)).
   - Default registry is loaded from [nuxt/starter/templates](https://github.com/nuxt/starter/tree/templates/templates)
+
+
+---
+
 ---
 title: "nuxi add"
 description: "Scaffold an entity into your Nuxt application."
@@ -12261,6 +12705,10 @@ npx nuxi add middleware auth
 # Generates `server/api/hello.ts`
 npx nuxi add api hello
 ```
+
+
+---
+
 ---
 title: "nuxi generate"
 description: Pre-renders every route of the application and stores the result in plain HTML files.
@@ -12285,6 +12733,10 @@ Option        | Default          | Description
 ::read-more{to="/docs/getting-started/deployment#static-hosting"}
 Read more about pre-rendering and static hosting.
 ::
+
+
+---
+
 ---
 title: "nuxi typecheck"
 description: The typecheck command runs vue-tsc to check types throughout your app.
@@ -12312,6 +12764,10 @@ This command sets `process.env.NODE_ENV` to `production`. To override, define `N
 ::read-more{to="/docs/guide/concepts/typescript#type-checking"}
 Read more on how to enable type-checking at build or development time.
 ::
+
+
+---
+
 ---
 title: "nuxi preview"
 description: The preview command starts a server to preview your application after the build command.
@@ -12338,6 +12794,10 @@ This command sets `process.env.NODE_ENV` to `production`. To override, define `N
 ::callout
 For convenience, in preview mode, your [`.env`](/docs/guide/directory-structure/env) file will be loaded into `process.env`. (However, in production you will need to ensure your environment variables are set yourself.)
 ::
+
+
+---
+
 ---
 title: "nuxi build"
 description: "Build your Nuxt application."
@@ -12363,6 +12823,10 @@ Option        | Default          | Description
 ::callout
 This command sets `process.env.NODE_ENV` to `production`.
 ::
+
+
+---
+
 ---
 title: "nuxi upgrade"
 description: The upgrade command upgrades Nuxt 3 to the latest version.
@@ -12382,6 +12846,10 @@ The `upgrade` command upgrades Nuxt 3 to the latest version.
 Option        | Default          | Description
 -------------------------|-----------------|------------------
 `--force, -f` | `false` | Removes `node_modules` and lock files before upgrade.
+
+
+---
+
 ---
 title: 'nuxi build-module'
 description: 'Nuxt command to build your Nuxt module before publishing.'
@@ -12406,6 +12874,10 @@ Option        | Default          | Description
 ::read-more{to="https://github.com/nuxt/module-builder" icon="i-simple-icons-github" color="gray" target="_blank"}
 Read more about `@nuxt/module-builder`.
 ::
+
+
+---
+
 ---
 title: 'nuxi cleanup'
 description: "Remove common generated Nuxt files and caches."
@@ -12429,6 +12901,10 @@ The `cleanup` command removes common generated Nuxt files and caches, including:
 Option        | Default          | Description
 -------------------------|-----------------|------------------
 `rootDir` | `.` | The root directory of the project.
+
+
+---
+
 ---
 title: Meta Tags
 description: 'Learn how to migrate from Nuxt 2 to Nuxt Bridge new meta tags.'
@@ -12542,6 +13018,10 @@ useHead({
 })
 </script>
 ```
+
+
+---
+
 ---
 title: Legacy Composition API
 description: 'Learn how to migrate to Composition API with Nuxt Bridge.'
@@ -12668,6 +13148,10 @@ The only key difference is that [`useRoute`](/docs/api/composables/use-route) no
 - console.log(route.value.path)
 + console.log(route.path)
 ```
+
+
+---
+
 ---
 title: TypeScript
 description: 'Learn how to use TypeScript with Nuxt Bridge.'
@@ -12718,6 +13202,10 @@ Overwriting options such as `"compilerOptions.paths"` with your own configuratio
 
 In case you need to extend options provided by `./.nuxt/tsconfig.json` further, you can use the `alias` property within your `nuxt.config`. `nuxi` will pick them up and extend `./.nuxt/tsconfig.json` accordingly.
 ::
+
+
+---
+
 ---
 title: Plugins and Middleware
 description: 'Learn how to migrate from Nuxt 2 to Nuxt Bridge new plugins and middleware.'
@@ -12766,6 +13254,10 @@ Use of `defineNuxtRouteMiddleware` is not supported outside of the middleware di
 You can also use [`definePageMeta`](https://nuxt.com/docs/api/utils/define-page-meta) in Nuxt Bridge.
 But only for `middleware` and `layout`.
 ::
+
+
+---
+
 ---
 title: Nitro
 description: 'Activate Nitro to your Nuxt 2 application with Nuxt Bridge.'
@@ -12860,6 +13352,10 @@ Add the folder `.output` to the `.gitignore` file.
 ## Ensure Everything Goes Well
 
 ✔️ Try with `nuxi dev` and `nuxi build` (or `nuxi generate`) to see if everything goes well.
+
+
+---
+
 ---
 title: Vite
 description: 'Activate Vite to your Nuxt 2 application with Nuxt Bridge.'
@@ -12897,6 +13393,10 @@ export default defineNuxtConfig({
   }
 })
 ```
+
+
+---
+
 ---
 title: Runtime Config
 description: 'Nuxt provides a runtime config API to expose configuration and secrets within your application.'
@@ -12935,6 +13435,10 @@ This also means that when you need to access public runtime config, it's behind 
 - <div>Website: {{ $config.websiteURL }}</div>
 + <div>Website: {{ $config.public.websiteURL }}</div>
 ```
+
+
+---
+
 ---
 title: New Composition API
 description: Nuxt Bridge implements composables compatible with Nuxt 3.
@@ -13139,6 +13643,10 @@ export default defineNuxtConfig({
 ```
 
 This will disable auto-imports completely but it's still possible to use [explicit imports](#explicit-imports) from `#imports`.
+
+
+---
+
 ---
 title: Configuration
 description: 'Learn how to configure Nuxt Bridge to your own needs.'
@@ -13225,6 +13733,10 @@ export default defineNuxtConfig({
 + }
 })
 ```
+
+
+---
+
 ---
 title: Overview
 description: Reduce the differences with Nuxt 3 and reduce the burden of migration to Nuxt 3.
@@ -13346,6 +13858,10 @@ The below `Upgrade Steps` does not need to be done all at once.
 ## Migrate from CommonJS to ESM
 
 Nuxt 3 natively supports TypeScript and ECMAScript Modules. Please check [Native ES Modules](/docs/guide/concepts/esm) for more info and upgrading.
+
+
+---
+
 ---
 navigation: false
 ---
@@ -13357,6 +13873,10 @@ This repository contains the documentation of Nuxt hosted on <https://nuxt.com/d
 ## Contributing
 
 Have a look at <https://github.com/nuxt/nuxt.com> to run the website locally.
+
+
+---
+
 ---
 title: "Debugging"
 description: "In Nuxt 3, you can get started with debugging your application directly in the browser as well as in your IDE."
@@ -13455,6 +13975,10 @@ You can also debug your Nuxt app in JetBrains IDEs such as IntelliJ IDEA, WebSto
 ### Other IDEs
 
 If you have another IDE and would like to contribute sample configuration, feel free to [open a PR](https://github.com/nuxt/nuxt/edit/main/docs/2.guide/3.going-further/9.debugging.md)!
+
+
+---
+
 ---
 title: "Custom Routing"
 description: "In Nuxt 3, your routing is defined by the structure of your files inside the pages directory. However, since it uses vue-router under the hood, Nuxt offers you several ways to add custom routes in your project."
@@ -13611,6 +14135,10 @@ export default <RouterConfig> {
   history: base => process.client ? createMemoryHistory(base) : null /* default */
 }
 ```
+
+
+---
+
 ---
 title: "Module Author Guide"
 description: "Learn how to create a Nuxt Module to integrate, enhance or extend any Nuxt applications."
@@ -14355,6 +14883,10 @@ By joining `nuxt-modules` we can rename your community module under the `@nuxtjs
 <!-- ## Module Internals
 
 Maybe just a quick section touching on "how modules work" under the hood, priority, etc. -->
+
+
+---
+
 ---
 title: "Runtime Config"
 description: "Nuxt provides a runtime config API to expose configuration and secrets within your application."
@@ -14516,6 +15048,10 @@ declare module 'nuxt/schema' {
 // It is always important to ensure you import/export something when augmenting a type
 export {}
 ```
+
+
+---
+
 ---
 title: "Nightly Release Channel"
 description: "The nightly release channel allows using Nuxt built directly from the latest commits to the repository."
@@ -14578,6 +15114,10 @@ npx nuxi-edge@latest [command]
 ::read-more{to="/docs/api/commands"}
 Read more about the available commands.
 ::
+
+
+---
+
 ---
 title: "Nuxt Kit"
 description: "@nuxt/kit provides features for module authors."
@@ -14625,6 +15165,10 @@ async function main() {
 }
 main()
 ```
+
+
+---
+
 ---
 title: Authoring Nuxt Layers
 description: Nuxt provides a powerful system that allows you to extend the default files, configs, and much more.
@@ -14831,10 +15375,18 @@ Configuration loading and extends support is handled by [unjs/c12](https://githu
 ::read-more{icon="i-simple-icons-github" color="gray" to="https://github.com/nuxt/nuxt/issues/13367" target="_blank"}
 Checkout our ongoing development to bring more improvements for layers support on GitHub.
 ::
+
+
+---
+
 ---
 navigation: false
 redirect: /guide/going-further/tooling
 ---
+
+
+---
+
 ---
 title: "NuxtApp"
 description: "In Nuxt 3, you can access runtime app context within composables, components and plugins."
@@ -14889,6 +15441,10 @@ It is possible to inject helpers by returning an object with a `provide` key in 
 ::read-more{to="https://v2.nuxt.com/docs/directory-structure/plugins#inject-in-root--context" target="_blank"}
 In Nuxt 2 plugins, this was referred to as **inject function**.
 ::
+
+
+---
+
 ---
 title: "How Nuxt Works?"
 description: "Nuxt is a minimal but highly customizable framework to build web applications."
@@ -14968,6 +15524,10 @@ While both areas can be extended, that runtime context is isolated from build-ti
 `nuxt.config` and [Nuxt Modules](/docs/guide/going-further/modules) can be used to extend the build context, and [Nuxt Plugins](/docs/guide/directory-structure/plugins) can be used to extend runtime.
 
 When building an application for production, `nuxi build` will generate a standalone build in the `.output` directory, independent of `nuxt.config` and [Nuxt modules](/docs/guide/going-further/modules).
+
+
+---
+
 ---
 title: "Experimental Features"
 description: "Enable Nuxt experimental features to unlock new possibilities."
@@ -15334,6 +15894,10 @@ export defineNuxtConfig({
   } 
 }) 
 ```
+
+
+---
+
 ---
 title: "Lifecycle Hooks"
 description: "Nuxt provides a powerful hooking system to expand almost every aspect using hooks."
@@ -15432,6 +15996,10 @@ declare module 'nitropack' {
   }
 }
 ```
+
+
+---
+
 ---
 title: ".nuxt"
 description: "Nuxt uses the .nuxt/ directory in development to generate your Vue application."
@@ -15452,6 +16020,10 @@ You can explore the generated files by opening the [Nuxt DevTools](https://devto
 ::callout{icon="i-ph-warning-duotone" color="amber"}
 You should not touch any files inside since the whole directory will be re-created when running [`nuxt dev`](/docs/api/commands/dev).
 ::
+
+
+---
+
 ---
 title: "middleware"
 description: "Nuxt provides middleware to run code before navigating to a particular route."
@@ -15625,6 +16197,10 @@ definePageMeta({
 Now, before navigation to that page can complete, the `auth` route middleware will be run.
 
 :link-example{to="/docs/examples/routing/middleware"}
+
+
+---
+
 ---
 title: "components"
 head.title: "components/"
@@ -16101,6 +16677,10 @@ export default defineNuxtConfig({
 It will automatically import the components only if used and also support HMR when updating your components in `node_modules/awesome-ui/components/`.
 
 :link-example{to="/docs/examples/features/auto-imports"}
+
+
+---
+
 ---
 title: 'modules'
 head.title: 'modules/'
@@ -16159,6 +16739,10 @@ modules/
 ```
 
 :read-more{to="/docs/guide/going-further/modules"}
+
+
+---
+
 ---
 title: "layouts"
 head.title: "layouts/"
@@ -16339,6 +16923,10 @@ definePageMeta({
 ::callout
 If you use `<NuxtLayout>` within your pages, make sure it is not the root element (or [disable layout/page transitions](/docs/getting-started/transitions#disable-transitions)).
 ::
+
+
+---
+
 ---
 title: "nuxt.config.ts"
 description: "Nuxt can be easily configured with a single nuxt.config file."
@@ -16381,6 +16969,10 @@ ssr=false
 ```
 
 If present the properties in `.nuxtrc` file will overwrite the properties in the `nuxt.config` file.
+
+
+---
+
 ---
 title: .nuxtignore
 head.title: '.nuxtignore'
@@ -16417,6 +17009,10 @@ middleware/foo/*.js
 ::read-more{icon="i-simple-icons-git" color="gray" title="the git documentation" to="https://git-scm.com/docs/gitignore" target="_blank"}
 More details about the spec are in the **gitignore documentation**.
 ::
+
+
+---
+
 ---
 title: "public"
 description: "The public/ directory is used to serve your website's static assets."
@@ -16444,6 +17040,10 @@ useSeoMeta({
 ::callout{to="https://v2.nuxt.com/docs/directory-structure/static" target="_blank"}
 This is known as the [`static/`] directory in Nuxt 2.
 ::
+
+
+---
+
 ---
 title: server
 head.title: 'server/'
@@ -16940,6 +17540,10 @@ export default defineNuxtConfig({
 })
 ```
 ::
+
+
+---
+
 ---
 title: 'content'
 head.title: 'content/'
@@ -16993,6 +17597,10 @@ To render content pages, add a [catch-all route](/docs/guide/directory-structure
 ::callout
 Head over to <https://content.nuxt.com> to learn more about the Content module features, such as how to build queries and use Vue components in your Markdown files with the MDC syntax.
 ::
+
+
+---
+
 ---
 title: ".gitignore"
 description: "A .gitignore file specifies intentionally untracked files that git should ignore."
@@ -17025,6 +17633,10 @@ logs
 .env.*
 !.env.example
 ```
+
+
+---
+
 ---
 title: 'composables'
 head.title: 'composables/'
@@ -17142,6 +17754,10 @@ export default defineNuxtConfig({
   }
 })
 ```
+
+
+---
+
 ---
 title: package.json
 head.title: package.json
@@ -17175,6 +17791,10 @@ The minimal `package.json` of your Nuxt application should looks like:
 ::read-more{icon="i-simple-icons-npm" color="gray" to="https://docs.npmjs.com/cli/configuring-npm/package-json" target="_blank"}
 Read more about the `package.json` file.
 ::
+
+
+---
+
 ---
 title: "tsconfig.json"
 description: "Nuxt generates a .nuxt/tsconfig.json file with sensible defaults and your aliases."
@@ -17199,6 +17819,10 @@ As you need to, you can customize the contents of this file. However, it is reco
 ::callout
 If you need to customize your `paths`, this will override the auto-generated path aliases. Instead, we recommend that you add any path aliases you need to the [`alias`](/docs/api/nuxt-config#alias) property within your `nuxt.config`, where they will get picked up and added to the auto-generated `tsconfig`.
 ::
+
+
+---
+
 ---
 title: "pages"
 description: "Nuxt provides a file-based routing to create routes within your web application."
@@ -17589,6 +18213,10 @@ export default defineNuxtConfig({
 ```
 
 :read-more{to="/docs/guide/going-further/layers"}
+
+
+---
+
 ---
 title: "assets"
 description: "The assets/ directory is used to add all the website's assets that the build tool will process."
@@ -17605,6 +18233,10 @@ The directory usually contains the following types of files:
 If you want to serve assets from the server, we recommend taking a look at the [`public/`](/docs/guide/directory-structure/public) directory.
 
 :read-more{to="/docs/getting-started/assets"}
+
+
+---
+
 ---
 title: 'utils'
 head.title: 'utils/'
@@ -17654,6 +18286,10 @@ The way `utils/` auto-imports work and are scanned is identical to the [`composa
 These utils are only available within the Vue part of your app. :br
 Only `server/utils` are auto-imported in the [`server/`](/docs/guide/directory-structure/server#server-utilities) directory.
 ::
+
+
+---
+
 ---
 title: ".output"
 description: "Nuxt creates the .output/ directory when building your application for production."
@@ -17672,6 +18308,10 @@ Use this directory to deploy your Nuxt application to production.
 ::callout{icon="i-ph-warning-duotone" color="amber"}
 You should not touch any files inside since the whole directory will be re-created when running [`nuxt build`](/docs/api/commands/build).
 ::
+
+
+---
+
 ---
 title: "plugins"
 description: "Nuxt has a plugins system to use Vue plugins and more at the creation of your Vue application."
@@ -17933,6 +18573,10 @@ If you register a Vue directive, you _must_ register it on both client and serve
 ::
 
 :read-more{icon="i-simple-icons-vuedotjs" title="Custom Directives on Vue Docs" to="https://vuejs.org/guide/reusability/custom-directives.html" target="_blank"}
+
+
+---
+
 ---
 title: app.config.ts
 head.title: 'app.config.ts'
@@ -18054,6 +18698,10 @@ export default defineAppConfig({
 ```
 
 ::
+
+
+---
+
 ---
 title: "app.vue"
 description: "The app.vue file is the main component of your Nuxt application."
@@ -18098,6 +18746,10 @@ Remember that `app.vue` acts as the main component of your Nuxt application. Any
 ::read-more{to="/docs/guide/directory-structure/layouts"}
 If you want to have the possibility to customize the structure around the page between pages, check out the `layouts/` directory.
 ::
+
+
+---
+
 ---
 title: "node_modules"
 description: "The package manager stores the dependencies of your project in the node_modules/ directory."
@@ -18110,6 +18762,10 @@ The package manager ([`npm`](https://docs.npmjs.com/cli/commands/npm) or [`yarn`
 ::callout
 This directory should be added to your [`.gitignore`](/docs/guide/directory-structure/gitignore) file to avoid pushing the dependencies to your repository.
 ::
+
+
+---
+
 ---
 title: ".env"
 description: "A .env file specifies your build/dev-time environment variables."
@@ -18167,6 +18823,10 @@ Note that for a purely static site, it is not possible to set runtime configurat
 If you want to use environment variables set at build time but do not care about updating these down the line (or only need to update them reactively _within_ your app) then `appConfig` may be a better choice. You can define `appConfig` both within your `nuxt.config` (using environment variables) and also within an `~/app.config.ts` file in your project.
 :read-more{to="/docs/guide/directory-structure/app-config"}
 ::
+
+
+---
+
 ---
 title: 'Rendering Modes'
 description: 'Learn about the different rendering modes available in Nuxt.'
@@ -18343,6 +19003,10 @@ You can explore open source examples deployed on some of the platform mentioned 
 ::
 
 <!-- TODO: link to templates with ESR category for examples -->
+
+
+---
+
 ---
 title: Server Engine
 description: 'Nuxt 3 is powered by a new server engine: Nitro.'
@@ -18405,6 +19069,10 @@ The output contains runtime code to run your Nuxt server in any environment (inc
 ::read-more{color="gray" icon="i-simple-icons-github" to="https://github.com/unjs/nitro" target="_blank"}
 Read more about Nitro engine on GitHub.
 ::
+
+
+---
+
 ---
 title: Auto-imports
 description: "Nuxt auto-imports components, composables, helper functions and Vue APIs."
@@ -18573,6 +19241,10 @@ export default defineNuxtConfig({
   }
 })
 ```
+
+
+---
+
 ---
 title: 'ES Modules'
 description: "Nuxt 3 (and Bridge) uses Native ES Modules."
@@ -18872,6 +19544,10 @@ const someFile = await resolvePath('my-lib', { url: import.meta.url })
   }
 }
 ```
+
+
+---
+
 ---
 title: 'Vue.js Development'
 description: "Nuxt uses Vue.js and adds features such as component auto-imports, file-based routing and composables for a SSR-friendly usage."
@@ -18975,6 +19651,10 @@ Both Vue 3 and Nuxt 3 are written in TypeScript. A fully typed codebase prevents
 ::read-more{to="/docs/guide/concepts/typescript"}
 Read the details about TypeScript in Nuxt 3
 ::
+
+
+---
+
 ---
 title: 'Modules'
 description: "Nuxt provides a module system to extend the framework core and simplify integrations."
@@ -19023,6 +19703,10 @@ Nuxt modules are now build-time-only, and the `buildModules` property used in Nu
 Everyone has the opportunity to develop modules and we cannot wait to see what you will build.
 
 :read-more{to="/docs/guide/going-further/modules" title="Module Author Guide"}
+
+
+---
+
 ---
 title: 'TypeScript'
 description: "Nuxt 3 is fully typed and provides helpful shortcuts to ensure you have access to accurate type information when you are coding."
@@ -19112,6 +19796,10 @@ export default defineNuxtConfig({
   }
 })
 ```
+
+
+---
+
 ---
 title: 'Nuxt Guide'
 titleTemplate: '%s'
@@ -19131,6 +19819,10 @@ surround: false
   Master Nuxt with advanced concepts like experimental features, hooks, modules, and more.
   ::
 ::
+
+
+---
+
 ---
 title: 'Contribution'
 description: 'Nuxt is a community project - and so we love contributions of all kinds! ❤️'
@@ -19338,6 +20030,10 @@ Here are some tips that may help improve your documentation:
 ::read-more{to="/docs/community/framework-contribution#documentation-guide"}
 Learn how to contribute to the documentation.
 ::
+
+
+---
+
 ---
 title: 'Reporting Bugs'
 description: 'One of the most valuable roles in open source is taking the time to report bugs helpfully.'
@@ -19394,6 +20090,10 @@ Once you've reproduced the issue, remove as much code from your reproduction as 
 ## Figure Out What the Cause Might Be
 
 With a Nuxt project, there are lots of moving pieces - from [Nuxt modules](/modules) to [other JavaScript libraries](https://www.npmjs.com). Try to report the bug at the most relevant and specific place. That will likely be the Nuxt module causing an issue, or the upstream library that Nuxt is depending on.
+
+
+---
+
 ---
 title: 'Releases'
 description: Discover the latest releases of Nuxt & Nuxt official modules.
@@ -19466,6 +20166,10 @@ navigation.icon: i-ph-notification-duotone
 ::read-more{icon="i-simple-icons-github" color="gray" to="https://github.com/nuxt" target="_blank"}
 Discover the `nuxt` organization on GitHub
 ::
+
+
+---
+
 ---
 title: 'Roadmap'
 description: 'Nuxt is constantly evolving, with new features and modules being added all the time.'
@@ -19548,6 +20252,10 @@ Maintenance | This version will only receive security patches
 Stable      | This version is being developed for and will receive security patches
 Development | This version could be unstable
 Scheduled   | This version does not exist yet but is planned
+
+
+---
+
 ---
 title: 'Framework'
 navigation.icon: i-ph-github-logo-duotone
@@ -19690,6 +20398,10 @@ Please make sure your PR title adheres to the [conventional commits](https://www
 ```bash [Example of PR title]
 docs: update the section about the nuxt.config.ts file
 ```
+
+
+---
+
 ---
 title: 'Getting Help'
 description: "We're a friendly community of developers and we'd love to help."
