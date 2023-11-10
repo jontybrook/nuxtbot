@@ -2,6 +2,11 @@
 
 Welcome to the NuxtBot repository! This is an open-source, community-driven initiative to create an AI-powered assistant for developers using the Nuxt JS framework. At this stage, NuxtBot is a collaborative project for sharing experiments, code snippets, ideas, and datasets that will contribute to the development of an effective and helpful bot.
 
+## See also
+
+- Nuxt - [nuxtjs.org](https://nuxtjs.org/)
+- [Nuxt Code Architect GPT](https://chat.openai.com/g/g-QpUGlIzio-nuxt-code-architect) - An OpenAI GPT with knowledge of Nuxt 3 documentation by [rubymignot.com](https://rubymignot.com/)
+
 ## Project Vision
 
 NuxtBot aims to assist developers by offering guidance, best practices, and insights directly from the Nuxt 3 documentation and the broader Nuxt ecosystem. Our goal is to build an AI bot that simplifies and enhances the Nuxt development experience.
@@ -26,9 +31,9 @@ We're at the early stages and every contribution helps! Here's how you can be a 
 
 ## Directory Structure
 
-- `/datasets` - Datasets of Nuxt 3 code examples.
+- `/datasets` - Datasets to be used for fine tuning or prompting models, such as summarised documentation and Nuxt 3 code examples.
 - `/code-snippets` - Individual code snippets and mini-examples of Nuxt 3 features.
-- `/experiments` - Experimental features or proof-of-concept code.
+- `/experiments` - Experiments and proof-of-concept code.
 - `/ideas` - Documentation of proposed ideas and features for NuxtBot.
 - `/discussions` - Summaries of discussions or meetings about the project.
 
